@@ -1,0 +1,50 @@
+
+
+<p [ngClass]="{'aberto': this.mostrarDetalhe,
+'fechado': !this.mostrarDetalhe}">{{mensagem}}</p>
+<!--
+<button (click)="mostrar();"
+[ngStyle]="{'border-color': this.mostrarDetalhe ? 'green' : 'red'}"
+>MostrarDetalhe</button>
+<div *ngIf="mostrarDetalhe">
+    Teste de diretivas Teste de diretivas Teste de diretivas
+    Teste de diretivas Teste de diretivas Teste de diretivas
+    Teste de diretivas Teste de diretivas Teste de diretivas
+</div>
+<ul>
+    <li *ngFor="let nomeDoCurso of cursos">{{nomeDoCurso}}</li>
+</ul>
+
+<select [(ngModel)]="selection">
+    <option *ngFor="let nomeDoCurso of cursos" >{{nomeDoCurso}}</option>
+</select>
+
+<div [ngSwitch]="selection">
+    <div class="block1" *ngSwitchCase="cursos[0]">java</div>
+    <div class="block2" *ngSwitchCase="cursos[1]">html5</div>
+    <div class="block3" *ngSwitchCase="cursos[2]">js</div>
+    <div class="block4" *ngSwitchCase="cursos[3]">ts</div>
+</div>
+-->
+
+Codigo:<input type="number" [(ngModel)]="this.usuario.codigo" /><br/>
+Nome:<input type="text" [(ngModel)]="this.usuario.nome" /><br/>
+Email:<input type="text" [(ngModel)]="this.usuario.email" /><br/>
+Senha:<input type="password" [(ngModel)]="this.usuario.senha" /><br/>
+<button (click)="gravar();">Gravar</button>
+<button (click)="carregar();">Pesquisar</button>
+<button (click)="alterar();">Alterar</button>
+<button (click)="remover();">Remover</button>
+
+<table border="1">
+    <tr><th>codigo</th><th>nome</th><th>email</th><th>senha</th></tr>
+    <tr *ngFor="let obj of listaUsuario">
+        <td>{{obj.codigo}}</td>
+        <td>{{obj.nome}}</td>
+        <td>{{obj.email}}</td>
+        <td>{{obj.senha}}</td>
+    </tr>
+</table>
+<button (click)="listar();">atualizar</button>
+
+<a routerLink="produto"><h2>Cadastrar Produto</h2></a>

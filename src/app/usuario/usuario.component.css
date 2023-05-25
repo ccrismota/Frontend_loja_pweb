@@ -1,0 +1,35 @@
+.aberto{
+    background-color: cadetblue;
+    color: black
+}
+.fechado{
+    background-color: palevioletred;
+    color: black;
+}
+
+/* .block1{
+    background-color :chartreuse;
+}
+.block2{
+    background-color :coral;
+}
+.block3{
+    background-color:dodgerblue;
+}
+.block4{
+    background-color: darkred;
+} */
+
+h2 {
+  text-align: center;
+  border-radius: 7px;
+  border: 1px solid black;
+  width: 250px;
+  background-color: #ebd510;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

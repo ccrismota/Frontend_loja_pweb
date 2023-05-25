@@ -1,0 +1,25 @@
+<p [ngClass]="{'aberto': this.mostrarDetalhe,
+'fechado': !this.mostrarDetalhe}">{{mensagem}}</p>
+
+
+Codigo:<input type="number" [(ngModel)]="this.produto.codigo" /><br/>
+Nome:<input type="text" [(ngModel)]="this.produto.nome" /><br/>
+Descrição:<input type="text" [(ngModel)]="this.produto.descricao" /><br/>
+Preço:<input type="text" [(ngModel)]="this.produto.preco" /><br/>
+Qtd:<input type="number" [(ngModel)]="this.produto.quantidade"/><br/>
+<button (click)="gravar();">Gravar</button>
+<button (click)="carregar();">Pesquisar</button>
+<button (click)="alterar();">Alterar</button>
+<button (click)="remover();">Remover</button>
+
+<table border="1">
+    <tr><th>codigo</th><th>nome</th><th>descrição</th><th>preço</th><th>quantidade</th></tr>
+    <tr *ngFor="let obj of listaProduto">
+        <td>{{obj.codigo}}</td>
+        <td>{{obj.nome}}</td>
+        <td>{{obj.descricao}}</td>
+        <td>R$ {{obj.preco}}</td>
+        <td>{{obj.quantidade}}</td>
+    </tr>
+</table>
+<button (click)="listar();">atualizar</button>
